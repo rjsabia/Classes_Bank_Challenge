@@ -8,6 +8,24 @@ public class Accounts {
     private String accountNumber;
     private double balance;
 
+    // create constructor
+    public Accounts() {
+        // default constructor
+        this("John Doe", "1111111111", "blabla@bla.com",
+                "00000000", 1);
+
+        System.out.println("Empty constructor has been called");
+    }
+
+    // the setup constructor
+    public Accounts(String name, String phoneNumber, String email,
+                    String accountNumber, double balance) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
 
     // Let user make a deposit
     public void deposit(double depositAmount) {
@@ -20,7 +38,7 @@ public class Accounts {
     public void withdrawal(double withdrawalAmount) {
         if (balance - withdrawalAmount < 0) {
             System.out.println("Only " + this.balance + " available. Withdrawal  of " +
-                    + withdrawalAmount + " not processed");
+                    +withdrawalAmount + " not processed");
         } else {
             balance -= withdrawalAmount;
             System.out.println("Withdrawal of " + withdrawalAmount
