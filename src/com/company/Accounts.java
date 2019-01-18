@@ -2,7 +2,7 @@ package com.company;
 
 public class Accounts {
 
-    private int phoneNumber;
+    private String phoneNumber;
     private String name;
     private String email;
     private String accountNumber;
@@ -13,17 +13,18 @@ public class Accounts {
     public void deposit(double depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made. New balance is: "
-        + this.balance);
+                + this.balance);
     }
 
     // Let user make a withdrawal
     public void withdrawal(double withdrawalAmount) {
-        if(balance - withdrawalAmount < 0) {
-            System.out.println("Only " + this.balance + " available. Withdrawal not processed");
+        if (balance - withdrawalAmount < 0) {
+            System.out.println("Only " + this.balance + " available. Withdrawal  of " +
+                    + withdrawalAmount + " not processed");
         } else {
             balance -= withdrawalAmount;
             System.out.println("Withdrawal of " + withdrawalAmount
-            + " processed. Remaining balance = " + this.balance);
+                    + " processed. Remaining balance = " + this.balance);
         }
     }
 
@@ -66,12 +67,12 @@ public class Accounts {
     }
 
     // Phone number getter and setter
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
 
         this.phoneNumber = phoneNumber;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
