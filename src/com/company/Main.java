@@ -48,6 +48,28 @@ public class Main {
         russell.withdrawal(50.00);
         //********************************
 
+        // New class tests for vip members
+
+        System.out.println("****************************");
+
+        VipMembers vip1 = new VipMembers();
+        System.out.println("Vip1's name is " + vip1.getVipName());
+
+        System.out.println("****************************");
+
+        VipMembers vip2 = new VipMembers("Russ", 100000.00);
+        System.out.println("Vip2 is " + vip2.getVipName() + " and has " + vip2.getCreditLimit()
+        + " available credit.");
+        System.out.println("Test for default email: " + vip2.getVipEmail());
+
+        System.out.println("****************************");
+
+        VipMembers vip3 = new VipMembers();
+        System.out.println("VIP 3 is default for all. Name: " + vip3.getVipName()
+        + ", Credit limit: " + vip3.getCreditLimit() + " and email is: " + vip3.getVipEmail());
+
+        System.out.println("****************************");
+
     }
 
 }
