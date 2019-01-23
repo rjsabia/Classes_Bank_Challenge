@@ -26,7 +26,6 @@ public class Accounts {
         this.accountNumber = accountNumber;
         this.balance = balance;
     }
-
     // Let user make a deposit
     public void deposit(double depositAmount) {
         this.balance += depositAmount;
@@ -45,11 +44,9 @@ public class Accounts {
                     + " processed. Remaining balance = " + this.balance);
         }
     }
-
     // balance getter and setter
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
-
     }
 
     public String getAccountNumber() {
@@ -59,7 +56,6 @@ public class Accounts {
     // Balance getter and setter
     public void setBalance(double balance) {
         this.balance = balance;
-
     }
 
     public double getBalance() {
@@ -86,12 +82,10 @@ public class Accounts {
 
     // Phone number getter and setter
     public void setPhoneNumber(String phoneNumber) {
-
         this.phoneNumber = phoneNumber;
     }
 
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
-
 }
